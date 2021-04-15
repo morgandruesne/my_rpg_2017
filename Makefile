@@ -9,13 +9,14 @@ CC	=	gcc
 
 CFLAGS	=	-W -Wall -Wextra
 
-CFLAGS	+=	-L ../.graphic_programming/lib/
+CFLAGS	+=	-L /usr/lib/
 
-CFLAGS	+=	-I ../.graph_programming/include/SFML/
+CFLAGS	+=	-I /usr/lib/SFML/
+CFLAGS	+=	-I /usr/lib/CFML/
 
 CFLAGS	+=	-I ./include/
 
-LIB	=	-lm -lc_graph_prog
+LIB	=	-lm -lcsfml‑system -lcsfml‑window -lcsfml‑network -lcsfml‑graphics -lcsfml‑audio -lcsfml‑main
 
 NAME	=	my_rpg
 
@@ -159,9 +160,6 @@ OBJ	=	$(SRC:.c=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	export LIBRARY_PATH=$LIBRARY_PATH:/home/charlieono/.graph_programming/lib
-	export LD_LIBRARY_PATH=$LIBRARY_PATH:/home/charlieono/.graph_programming/lib
-	export CPATH=$CPATH:/home/charlieono/.graph_programming/include
 	$(CC) $(OBJ) $(CFLAGS) $(LIB) -o $(NAME)
 
 clean:
