@@ -16,8 +16,8 @@ CFLAGS	+=	-I /usr/lib/CFML/
 
 CFLAGS	+=	-I ./include/
 
-LIB	=	-lm -lcsfml‑system -lcsfml‑window -lcsfml‑network -lcsfml‑graphics -lcsfml‑audio -lcsfml‑main
-
+# LIB	=	-lm -lcsfml‑system -lcsfml‑window -lcsfml‑network -lcsfml‑graphics -lcsfml‑audio -lcsfml‑main
+LIB		= -lcsfml-system -lcsfml-graphics -lcsfml-window -lcsfml-audio -lm
 NAME	=	my_rpg
 
 SRC	=	src/main.c					\
